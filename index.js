@@ -7,15 +7,17 @@
 // - [x] read all
 // - [x] read one by Id
 // - [x] create
-// - [ ] edit
-// - [ ] delete
 // - [x] search
+// - [x] edit
+// - [x] delete
 // implement controllers
 // - [x] home (catalog)
 // - [x] about
 // - [x] details
 // - [x] create
-// - [x] improved home (search)
+// - [x] improv ed home (search)
+// - [x] edit
+// - [x] delete
 // [x] add front-end code
 
 const express = require('express');
@@ -23,10 +25,14 @@ const hbs = require('express-handlebars');
 
 const carsService = require('./services/cars');
 
+const { home } = require('./controllers/home');
 const { about } = require('./controllers/about');
 const create = require('./controllers/create');
 const { details } = require('./controllers/details');
-const { home } = require('./controllers/home');
+const edit = require('./controllers/edit');
+const deleteCar = require('./controllers/delete');
+
+
 const { notFound } = require('./controllers/notFound');
 
 const app = express();
@@ -47,6 +53,14 @@ app.get('/details/:id', details);
 app.route('/create')
     .get(create.get)
     .post(create.post);
+
+app.route('/delete/:id')
+    .get(deleteCar.get)
+    .post(deleteCar.post);
+
+app.route('/edit/:id')
+    .get(edit.get)
+    .post(edit.post);
 
 app.all('*', notFound);
 

@@ -1,10 +1,4 @@
 {
-  "asdf1234": {
-    "name": "Subaru Legacy 2.0i 4x4",
-    "description": "202 800 km. Newly imported. Manual transmission. Petrol engine.",
-    "imageUrl": "11637411542178388_Nw.jpg",
-    "price": 3300
-  },
   "2f8ef455-c009": {
     "name": "Toyota Avensis 1.6i",
     "description": "Imported from Denmark. 203 000 km with full service history. No blemishes on the paint, well maintained interior, technically sound. Possible lease through leasing company or bank or barter for another car.",
@@ -15,7 +9,7 @@
     "name": "Subaru Legacy 2.0i 4x4",
     "description": "202 800 km. Newly imported. Manual transmission. Petrol engine.",
     "imageUrl": "11637411542178388_Nw.jpg",
-    "price": 3300
+    "price": 3099
   },
   "3ba2d888-1ce4": {
     "name": "VW Golf 1.9 TDI 90ps High-Line",
