@@ -11,7 +11,8 @@ header ul {
 }
 
 img {
-    height: 200px;
+    max-height: 200px;
+    max-width: 200px;
     width: auto;
 }
 
@@ -72,7 +73,6 @@ div.cube {
     display: inline-block;
     border: 1px solid #2b415433;
     background: white;
-    width: 23%;
     vertical-align: top;
 }
 
