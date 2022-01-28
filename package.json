@@ -19,6 +19,7 @@
   "homepage": "https://github.com/viktorpts/js-back-end-cars#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "express-handlebars": "^6.0.2"
+    "express-handlebars": "^6.0.2",
+    "mongoose": "^6.1.8"
   }
 }
