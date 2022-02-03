@@ -11,8 +11,7 @@ header ul {
 }
 
 img {
-    max-height: 200px;
-    max-width: 200px;
+    height: 200px;
     width: auto;
 }
 
@@ -73,8 +72,8 @@ div.cube {
     display: inline-block;
     border: 1px solid #2b415433;
     background: white;
+    width: 23%;
     vertical-align: top;
-    width: 250px;
 }
 
 div.cube:hover p.name {
@@ -89,8 +88,8 @@ p.name {
     text-transform: uppercase;
     padding: 10px;
     border-bottom: 1px solid #2b415433;
-    height: 60px;
 }
+
 
 button, main a.btn {
     border: none;
@@ -99,18 +98,25 @@ button, main a.btn {
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
-    width: 43%;
+    width: 35%;
     margin: 12px;
-    margin-left: 6%;
     border-radius: 4px;
     background: #607588;
     color: white;
+}
+
+.details a.btn{
+    width: 28%;
 }
 
 button:hover {
     background-color: #0B2133;
     color: white;
     cursor: pointer;
+}
+
+a.btn:hover{
+    text-decoration: underline;
 }
 
 a {
@@ -159,6 +165,7 @@ form label {
 
 input[type=text],
 input[type=number],
+input[type=password],
 select,
 textarea {
     width: 100%;
@@ -201,7 +208,7 @@ input[type=submit]:hover {
 div.form {
     border-radius: 5px;
     padding: 20px;
-    width: 300px;
+    width: 36%;
     margin: auto;
 }
 
@@ -231,6 +238,19 @@ h2{
     text-align: center;
 }
 
+.accessories .accessory{
+    display: inline-block;
+    background-color: #f3f3f2;
+    width: 20%;
+    padding: 1%;
+    margin: 1%;
+}
+
+.accessories, .italic{
+    text-align: center;
+    font-style: italic;
+}
+
 footer {
     background: #607588;
     padding: 1em;
@@ -241,7 +261,6 @@ footer {
 
 /*Animations & Transitions
 */
-
 
 @-webkit-keyframes fadeOut {
     from {
@@ -261,12 +280,4 @@ footer {
     to {
         opacity: 0;
     }
-}
-
-.description {
-    display: none;
-}
-
-.description p {
-    margin: 10px;
 }

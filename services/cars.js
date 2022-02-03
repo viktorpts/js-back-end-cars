@@ -3,7 +3,9 @@ const { carViewModel } = require('./util');
 
 
 async function getAll(query) {
-    const options = {};
+    const options = {
+        isDeleted: false
+    };
 
     if (query.search) {
         options.name = new RegExp(query.search, 'i');
@@ -23,7 +25,7 @@ async function getAll(query) {
 }
 
 async function getById(id) {
-    const car = await Car.findById(id).populate('accessories');
+    const car = await Car.findById(id).where({ isDeleted: false }).populate('accessories');
     if (car) {
         return carViewModel(car);
     } else {
@@ -37,11 +39,12 @@ async function createCar(car) {
 }
 
 async function deleteById(id) {
-    await Car.findByIdAndDelete(id);
+    // await Car.findByIdAndDelete(id);
+    await Car.findByIdAndUpdate(id, { isDeleted: true });
 }
 
 async function updateById(id, car) {
-    const existing = await Car.findById(id);
+    const existing = await Car.findById(id).where({ isDeleted: false });
 
     existing.name = car.name;
     existing.description = car.description;
